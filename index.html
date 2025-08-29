@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="GUI.js"></script>
+</head>
+<body>
+    <div id="game">
+        <h1>Leap Frog</h1>
+        <p id="message"></p>
+        <table id="board"></table>
+        <div id="game-info">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Player 1</th>
+                        <th>Player 2</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <form>
+                <label for="board-size">Tamanho do tabuleiro</label>
+                <input type="number" name="board-size" placeholder="Tamanho" step="1" min="4" max="20" />
+                <button type="button">Recarregar Jogo</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
