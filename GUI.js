@@ -1,4 +1,5 @@
 import Cell from "./Cell.js";
+import CellState from "./CellState.js";
 import LeapFrog from "./LeapFrog.js";
 
 class GUI {
@@ -11,7 +12,6 @@ class GUI {
 
         let td = ev.target;
         let cell = new Cell(td.parentNode.rowIndex, td.cellIndex);
-        console.log(cell.x, cell.y);
         
         try {
             this.game.play(cell);
@@ -31,7 +31,7 @@ class GUI {
             row.map((cell, j) => {
                 let td = document.createElement("td");
                 td.addEventListener("click", this.play.bind(this));
-                if(j == 0 || j == row.length - 1) {
+                if(this.game.board[i][j] != CellState.EMPTY) {
                     td.className = cell;
                 }
                 
